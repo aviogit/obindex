@@ -23,7 +23,7 @@ BinaryIndex::BinaryIndex(const BinaryIndexParams params) :
     _feat_index(0),
     _next_desc_pos(0)
 {
-    _descriptors = cv::Mat::zeros(params.max_descriptors, _desc_bytes, CV_8U);
+    _descriptors = cv_umat_type::zeros(params.max_descriptors, _desc_bytes, CV_8U);
 }
 
 BinaryIndex::~BinaryIndex()
@@ -36,7 +36,7 @@ BinaryIndex::~BinaryIndex()
     }
 }
 
-void BinaryIndex::add(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs)
+void BinaryIndex::add(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs)
 {
     if (!_init)
     {
@@ -88,7 +88,7 @@ void BinaryIndex::addToInvertedIndex(const int image_id, const std::vector<cv::K
 	_total_images++;
 }
 
-void BinaryIndex::update(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs, const std::vector<cv::DMatch>& matches)
+void BinaryIndex::update(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs, const std::vector<cv::DMatch>& matches)
 {
 	// Updating the visual descriptors found in the index according to the matches
 	_updateDescriptors(image_id, kps, descs, matches);
@@ -133,7 +133,7 @@ void BinaryIndex::update(const int image_id, const std::vector<cv::KeyPoint>& kp
     _total_images++;
 }
 
-double BinaryIndex::search(const cv::Mat& qdescs, std::vector<std::vector<cv::DMatch> >& matches, const int knn)
+double BinaryIndex::search(const cv_umat_type& qdescs, std::vector<std::vector<cv::DMatch> >& matches, const int knn)
 {
     FMat flann_descs = _toFlannMat(qdescs);
 	std::vector<std::vector<int> > indices;
@@ -167,7 +167,7 @@ double BinaryIndex::search(const cv::Mat& qdescs, std::vector<std::vector<cv::DM
     return search_time;
 }
 
-double BinaryIndex::getSimilarImages(const cv::Mat& qimage, const std::vector<cv::DMatch>& gmatches, std::vector<ImageMatch>& img_matches)
+double BinaryIndex::getSimilarImages(const cv_umat_type& qimage, const std::vector<cv::DMatch>& gmatches, std::vector<ImageMatch>& img_matches)
 {
     // Initializing the resulting structure
     img_matches.resize(_total_images);
@@ -254,19 +254,38 @@ unsigned BinaryIndex::size()
     return _feat_index->size();
 }
 
-FMat BinaryIndex::_toFlannMat(const cv::Mat& cvmat)
+FMat BinaryIndex::_toFlannMat(const cv_umat_type& cvmat)
 {
-    FMat flannmat(cvmat.data, cvmat.rows, cvmat.cols);
+#if CV_MAJOR_VERSION == 2
+
+    FMat            flannmat    (cvmat.data, cvmat.rows, cvmat.cols);
+
+#elif CV_MAJOR_VERSION == 3
+
+    cv::Mat         old_mat     (cvmat.getMat(cv::ACCESS_READ));
+    FMat            flannmat    (old_mat.data, cvmat.rows, cvmat.cols);
+
+#endif
+
     return flannmat;
 }
 
-cv::Mat BinaryIndex::_toCvMat(const FMat& flannmat, int type)
+cv_umat_type BinaryIndex::_toCvMat(const FMat& flannmat, int type)
 {
-    cv::Mat cvmat(flannmat.rows, flannmat.cols, type, flannmat.ptr());
+#if CV_MAJOR_VERSION == 2
+
+    cv_umat_type    cvmat       (flannmat.rows, flannmat.cols, type, flannmat.ptr());
+
+#elif CV_MAJOR_VERSION == 3
+
+    cv::Mat         old_mat     (flannmat.rows, flannmat.cols, type, flannmat.ptr());
+    cv_umat_type    cvmat       (old_mat.getUMat(cv::ACCESS_READ));
+
+#endif
     return cvmat;
 }
 
-void BinaryIndex::_initIndex(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs)
+void BinaryIndex::_initIndex(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs)
 {
     // Copying the descriptors to the merged matrix
     _copyDescriptors(descs);
@@ -289,7 +308,7 @@ void BinaryIndex::_initIndex(const int image_id, const std::vector<cv::KeyPoint>
     }
 }
 
-void BinaryIndex::_updateDescriptors(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs, const std::vector<cv::DMatch>& matches)
+void BinaryIndex::_updateDescriptors(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs, const std::vector<cv::DMatch>& matches)
 {
     for (size_t match_ind = 0; match_ind < matches.size(); match_ind++)
     {
@@ -298,7 +317,12 @@ void BinaryIndex::_updateDescriptors(const int image_id, const std::vector<cv::K
 
         // Updating the descriptor inside the feature index.
         unsigned char new_desc[_desc_bytes];
+#if CV_MAJOR_VERSION == 2
         const uchar* q_desc = descs.ptr(qindex);
+#elif CV_MAJOR_VERSION == 3
+        const cv::Mat tmp_descs(descs.getMat(cv::ACCESS_READ));
+        const uchar* q_desc = tmp_descs.ptr(qindex);
+#endif
         const uchar* t_desc = _feat_index->getPoint(tindex);
         for (int byte_ind = 0; byte_ind < _desc_bytes; byte_ind++)
         {
@@ -315,15 +339,15 @@ void BinaryIndex::_updateDescriptors(const int image_id, const std::vector<cv::K
 
         // Adding an entry to the inverse index.
         InvertedIndexEntry inv_entry;
-        inv_entry.image_id = image_id;
-        inv_entry.distance = matches[match_ind].distance;
-        inv_entry.coords = kps[qindex].pt;
-        inv_entry.orig_feat_id = qindex;
+        inv_entry.image_id      = image_id;
+        inv_entry.distance      = matches[match_ind].distance;
+        inv_entry.coords        = kps[qindex].pt;
+        inv_entry.orig_feat_id  = qindex;
         _inv_index[tindex].push_back(inv_entry);
     }
 }
 
-void BinaryIndex::_copyDescriptors(const cv::Mat &descs)
+void BinaryIndex::_copyDescriptors(const cv_umat_type &descs)
 {
     // Copying the descriptors to the merged matrix
     int ndescs = descs.rows;

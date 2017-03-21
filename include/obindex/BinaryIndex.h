@@ -15,9 +15,22 @@
 #include <map>
 
 #include <flann/flann.hpp>
+
 #include <opencv2/opencv.hpp>
+#include <opencv2/core/version.hpp>
 
 #include "obindex/Timer.h"
+
+
+#if CV_MAJOR_VERSION == 2
+
+    typedef cv::Mat                                 cv_umat_type;
+
+#elif CV_MAJOR_VERSION == 3
+
+    typedef cv::UMat                                cv_umat_type;
+
+#endif
 
 namespace obindex
 {
@@ -107,15 +120,15 @@ public:
     BinaryIndex(const BinaryIndexParams params = BinaryIndexParams());
     virtual ~BinaryIndex();
 
-    void add(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs);
-    void update(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs, const std::vector<cv::DMatch>& matches);
-    void addToInvertedIndex(const int image_id, const std::vector<cv::KeyPoint>& kps, const std::vector<cv::DMatch>& matches);
-    double search(const cv::Mat& qdescs, std::vector<std::vector<cv::DMatch> >& matches, const int knn = 2);
-    double getSimilarImages(const cv::Mat& qimage, const std::vector<cv::DMatch>& gmatches, std::vector<ImageMatch>& img_matches);
-    void remove(const unsigned int desc_id);
-    void rebuild();
-    unsigned size();
-	void saveDescriptorsInfo(const std::string file);
+    void        add                 (const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs);
+    void        update              (const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs, const std::vector<cv::DMatch>& matches);
+    void        addToInvertedIndex  (const int image_id, const std::vector<cv::KeyPoint>& kps, const std::vector<cv::DMatch>& matches);
+    double      search              (const cv_umat_type& qdescs, std::vector<std::vector<cv::DMatch> >& matches, const int knn = 2);
+    double      getSimilarImages    (const cv_umat_type& qimage, const std::vector<cv::DMatch>& gmatches, std::vector<ImageMatch>& img_matches);
+    void        remove              (const unsigned int desc_id);
+    void        rebuild             ();
+    unsigned    size                ();
+    void        saveDescriptorsInfo (const std::string file);
 
 private:
     bool _init;
@@ -125,19 +138,20 @@ private:
     float _rebuild_thresh;
     int _desc_bytes;
     int _total_images;
+
     MeanPointPolicy _meanp_policy;
     ScoringMethod _scoring_method;
     flann::Index<flann::Hamming<unsigned char> >* _feat_index;
     std::map<int, std::vector<InvertedIndexEntry> > _inv_index;
-    cv::Mat _descriptors;
+    cv_umat_type _descriptors;
     int _next_desc_pos;
 
-    FMat _toFlannMat(const cv::Mat& cvmat);
-    cv::Mat _toCvMat(const FMat& flannmat, int type = 0);
-    void _initIndex( const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs);
-    void _updateDescriptors(const int image_id, const std::vector<cv::KeyPoint>& kps, const cv::Mat& descs, const std::vector<cv::DMatch>& matches);
-    void _copyDescriptors(const cv::Mat& descs);
-	unsigned char _countOnes(unsigned char x);
+    FMat            _toFlannMat         (const cv_umat_type& cvmat);
+    cv_umat_type    _toCvMat            (const FMat& flannmat, int type = 0);
+    void            _initIndex          (const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs);
+    void            _updateDescriptors  (const int image_id, const std::vector<cv::KeyPoint>& kps, const cv_umat_type& descs, const std::vector<cv::DMatch>& matches);
+    void            _copyDescriptors    (const cv_umat_type& descs);
+    unsigned char   _countOnes          (unsigned char x);
 };
 
 }

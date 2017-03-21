@@ -1,0 +1,905 @@
+time rosrun obindex test_bindex . &> /tmp/benchmark-kinetic.txt
+
+-- Example: obindex for indexing a set of images --
+-- Copyright (c) 2015 Emilio Garcia-Fidalgo --
+Validating BinaryIndex ...
+Processing image 0
+Cand: 0, Score: 0
+Total features found in the image: 1026
+Total matches found against the index: 33930
+Total index size BEFORE UPDATE: 33930
+Total index size AFTER UPDATE: 33930
+Processing image 1
+Cand: 0, Score: 0.458409
+Cand: 1, Score: 0
+Total features found in the image: 1051
+Total matches found against the index: 8996
+Total index size BEFORE UPDATE: 33930
+Total index size AFTER UPDATE: 34941
+Processing image 2
+Cand: 0, Score: 0.421955
+Cand: 1, Score: 0.0696281
+Cand: 2, Score: 0
+Total features found in the image: 1153
+Total matches found against the index: 7942
+Total index size BEFORE UPDATE: 34941
+Total index size AFTER UPDATE: 36057
+Processing image 3
+Cand: 0, Score: 0.387194
+Cand: 2, Score: 0.0761012
+Cand: 1, Score: 0.0609304
+Cand: 3, Score: 0
+Total features found in the image: 1123
+Total matches found against the index: 7193
+Total index size BEFORE UPDATE: 36057
+Total index size AFTER UPDATE: 37142
+Processing image 4
+Cand: 0, Score: 0.327978
+Cand: 3, Score: 0.0722104
+Cand: 2, Score: 0.0617937
+Cand: 1, Score: 0.0560573
+Cand: 4, Score: 0
+Total features found in the image: 1036
+Total matches found against the index: 6155
+Total index size BEFORE UPDATE: 37142
+Total index size AFTER UPDATE: 38137
+Processing image 5
+Cand: 0, Score: 0.298407
+Cand: 4, Score: 0.064583
+Cand: 3, Score: 0.0579926
+Cand: 2, Score: 0.0530695
+Cand: 1, Score: 0.0465679
+Cand: 5, Score: 0
+Total features found in the image: 1079
+Total matches found against the index: 5585
+Total index size BEFORE UPDATE: 38137
+Total index size AFTER UPDATE: 39185
+Processing image 6
+Cand: 0, Score: 0.287105
+Cand: 5, Score: 0.0744285
+Cand: 4, Score: 0.0601637
+Cand: 3, Score: 0.0524031
+Cand: 2, Score: 0.0471392
+Cand: 1, Score: 0.0413594
+Cand: 6, Score: 0
+Total features found in the image: 1085
+Total matches found against the index: 5316
+Total index size BEFORE UPDATE: 39185
+Total index size AFTER UPDATE: 40225
+Processing image 7
+Cand: 0, Score: 0.240431
+Cand: 6, Score: 0.0768099
+Cand: 5, Score: 0.0584351
+Cand: 4, Score: 0.0525284
+Cand: 3, Score: 0.0412003
+Cand: 2, Score: 0.0389095
+Cand: 1, Score: 0.0348776
+Cand: 7, Score: 0
+Total features found in the image: 1070
+Total matches found against the index: 4542
+Total index size BEFORE UPDATE: 40225
+Total index size AFTER UPDATE: 41262
+Processing image 8
+Cand: 0, Score: 0.199274
+Cand: 7, Score: 0.0763494
+Cand: 6, Score: 0.0659906
+Cand: 5, Score: 0.0518164
+Cand: 4, Score: 0.0425729
+Cand: 3, Score: 0.0374696
+Cand: 2, Score: 0.0360146
+Cand: 1, Score: 0.0337387
+Cand: 8, Score: 0
+Total features found in the image: 1056
+Total matches found against the index: 4355
+Total index size BEFORE UPDATE: 41262
+Total index size AFTER UPDATE: 42279
+Processing image 9
+Cand: 0, Score: 0.191621
+Cand: 8, Score: 0.0858092
+Cand: 7, Score: 0.0606721
+Cand: 6, Score: 0.0537424
+Cand: 5, Score: 0.0423035
+Cand: 4, Score: 0.0367383
+Cand: 2, Score: 0.0355448
+Cand: 3, Score: 0.0343195
+Cand: 1, Score: 0.0281326
+Cand: 9, Score: 0
+Total features found in the image: 1140
+Total matches found against the index: 4215
+Total index size BEFORE UPDATE: 42279
+Total index size AFTER UPDATE: 43367
+Processing image 10
+Cand: 0, Score: 0.14918
+Cand: 9, Score: 0.0881223
+Cand: 8, Score: 0.064111
+Cand: 7, Score: 0.0505085
+Cand: 6, Score: 0.0433957
+Cand: 5, Score: 0.0357321
+Cand: 4, Score: 0.0293888
+Cand: 3, Score: 0.0259547
+Cand: 1, Score: 0.0244125
+Cand: 2, Score: 0.0243474
+Cand: 10, Score: 0
+Total features found in the image: 1011
+Total matches found against the index: 3681
+Total index size BEFORE UPDATE: 43367
+Total index size AFTER UPDATE: 44355
+Processing image 11
+Cand: 0, Score: 0.128552
+Cand: 10, Score: 0.0906814
+Cand: 9, Score: 0.0795097
+Cand: 8, Score: 0.0623797
+Cand: 7, Score: 0.0456993
+Cand: 6, Score: 0.0373893
+Cand: 5, Score: 0.0304292
+Cand: 4, Score: 0.0262775
+Cand: 3, Score: 0.0216091
+Cand: 2, Score: 0.0195754
+Cand: 1, Score: 0.0184544
+Cand: 11, Score: 0
+Total features found in the image: 1089
+Total matches found against the index: 3704
+Total index size BEFORE UPDATE: 44355
+Total index size AFTER UPDATE: 45410
+Processing image 12
+Cand: 0, Score: 0.116189
+Cand: 11, Score: 0.0905068
+Cand: 10, Score: 0.0677938
+Cand: 9, Score: 0.0624421
+Cand: 8, Score: 0.0495934
+Cand: 7, Score: 0.0391184
+Cand: 6, Score: 0.0327363
+Cand: 5, Score: 0.0266057
+Cand: 4, Score: 0.0195888
+Cand: 3, Score: 0.0183027
+Cand: 2, Score: 0.0173771
+Cand: 1, Score: 0.0146503
+Cand: 12, Score: 0
+Total features found in the image: 1001
+Total matches found against the index: 3345
+Total index size BEFORE UPDATE: 45410
+Total index size AFTER UPDATE: 46377
+Processing image 13
+Cand: 0, Score: 0.100129
+Cand: 12, Score: 0.0760727
+Cand: 11, Score: 0.0543708
+Cand: 10, Score: 0.0519349
+Cand: 9, Score: 0.0352959
+Cand: 8, Score: 0.030649
+Cand: 7, Score: 0.0211256
+Cand: 6, Score: 0.0185167
+Cand: 5, Score: 0.0162045
+Cand: 3, Score: 0.0129032
+Cand: 2, Score: 0.012601
+Cand: 1, Score: 0.0124251
+Cand: 4, Score: 0.0116548
+Cand: 13, Score: 0
+Total features found in the image: 1054
+Total matches found against the index: 2654
+Total index size BEFORE UPDATE: 46377
+Total index size AFTER UPDATE: 47388
+Processing image 14
+Cand: 0, Score: 0.0946753
+Cand: 13, Score: 0.0714227
+Cand: 12, Score: 0.0579628
+Cand: 11, Score: 0.0389413
+Cand: 10, Score: 0.0335559
+Cand: 9, Score: 0.0260594
+Cand: 8, Score: 0.0210682
+Cand: 7, Score: 0.0186949
+Cand: 6, Score: 0.01566
+Cand: 5, Score: 0.0122267
+Cand: 2, Score: 0.0115107
+Cand: 1, Score: 0.0110073
+Cand: 4, Score: 0.0107342
+Cand: 3, Score: 0.0100055
+Cand: 14, Score: 0
+Total features found in the image: 1022
+Total matches found against the index: 2410
+Total index size BEFORE UPDATE: 47388
+Total index size AFTER UPDATE: 48340
+Processing image 15
+Cand: 0, Score: 0.0911452
+Cand: 14, Score: 0.066881
+Cand: 13, Score: 0.0534826
+Cand: 12, Score: 0.0458654
+Cand: 11, Score: 0.0324042
+Cand: 10, Score: 0.0250695
+Cand: 9, Score: 0.0198578
+Cand: 8, Score: 0.0157162
+Cand: 7, Score: 0.0123181
+Cand: 6, Score: 0.0105592
+Cand: 1, Score: 0.00969829
+Cand: 5, Score: 0.00932116
+Cand: 3, Score: 0.00884601
+Cand: 2, Score: 0.00883461
+Cand: 4, Score: 0.00864644
+Total features found in the image: 1001
+Total matches found against the index: 2288
+Total index size BEFORE UPDATE: 48340
+Total index size AFTER UPDATE: 49311
+Processing image 16
+Cand: 0, Score: 0.0886777
+Cand: 15, Score: 0.0814907
+Cand: 14, Score: 0.0584977
+Cand: 13, Score: 0.0461955
+Cand: 12, Score: 0.0414603
+Cand: 11, Score: 0.0286302
+Cand: 10, Score: 0.0235758
+Cand: 9, Score: 0.0186587
+Cand: 8, Score: 0.0136531
+Cand: 6, Score: 0.0125703
+Cand: 7, Score: 0.0118547
+Cand: 1, Score: 0.0106268
+Cand: 2, Score: 0.0094559
+Cand: 5, Score: 0.00814771
+Cand: 3, Score: 0.00772535
+Total features found in the image: 1084
+Total matches found against the index: 2431
+Total index size BEFORE UPDATE: 49311
+Total index size AFTER UPDATE: 50356
+Processing image 17
+Cand: 16, Score: 0.0936573
+Cand: 0, Score: 0.0926407
+Cand: 15, Score: 0.0702201
+Cand: 14, Score: 0.0605186
+Cand: 12, Score: 0.0518607
+Cand: 13, Score: 0.0497702
+Cand: 11, Score: 0.0372402
+Cand: 10, Score: 0.0259708
+Cand: 9, Score: 0.0232967
+Cand: 8, Score: 0.018265
+Cand: 7, Score: 0.0150406
+Cand: 6, Score: 0.0126933
+Cand: 1, Score: 0.0117626
+Cand: 5, Score: 0.0116282
+Cand: 2, Score: 0.0112204
+Total features found in the image: 1138
+Total matches found against the index: 2954
+Total index size BEFORE UPDATE: 50356
+Total index size AFTER UPDATE: 51437
+Processing image 18
+Cand: 17, Score: 0.11411
+Cand: 0, Score: 0.0891663
+Cand: 16, Score: 0.0790907
+Cand: 15, Score: 0.0561473
+Cand: 14, Score: 0.0475553
+Cand: 12, Score: 0.0452496
+Cand: 13, Score: 0.0431355
+Cand: 11, Score: 0.0308752
+Cand: 10, Score: 0.0242362
+Cand: 9, Score: 0.0218382
+Cand: 8, Score: 0.0169247
+Cand: 7, Score: 0.0152689
+Cand: 6, Score: 0.0139433
+Cand: 2, Score: 0.0127438
+Cand: 5, Score: 0.0107379
+Total features found in the image: 1071
+Total matches found against the index: 3102
+Total index size BEFORE UPDATE: 51437
+Total index size AFTER UPDATE: 52470
+Processing image 19
+Cand: 18, Score: 0.129742
+Cand: 17, Score: 0.0985243
+Cand: 0, Score: 0.0832754
+Cand: 16, Score: 0.0713994
+Cand: 15, Score: 0.0464903
+Cand: 12, Score: 0.0395013
+Cand: 14, Score: 0.0390524
+Cand: 13, Score: 0.0378581
+Cand: 11, Score: 0.0317947
+Cand: 10, Score: 0.0251867
+Cand: 9, Score: 0.0197405
+Cand: 8, Score: 0.0141853
+Cand: 7, Score: 0.0127402
+Cand: 6, Score: 0.01242
+Cand: 2, Score: 0.0119045
+Total features found in the image: 1018
+Total matches found against the index: 3196
+Total index size BEFORE UPDATE: 52470
+Total index size AFTER UPDATE: 53442
+Processing image 20
+Cand: 19, Score: 0.122105
+Cand: 0, Score: 0.0909453
+Cand: 18, Score: 0.0868088
+Cand: 17, Score: 0.0798767
+Cand: 16, Score: 0.0570202
+Cand: 14, Score: 0.0400022
+Cand: 15, Score: 0.0399785
+Cand: 12, Score: 0.0361315
+Cand: 13, Score: 0.0318566
+Cand: 11, Score: 0.0308972
+Cand: 10, Score: 0.0214519
+Cand: 9, Score: 0.0174599
+Cand: 8, Score: 0.0133652
+Cand: 7, Score: 0.0127619
+Cand: 2, Score: 0.0108306
+Total features found in the image: 1045
+Total matches found against the index: 3202
+Total index size BEFORE UPDATE: 53442
+Total index size AFTER UPDATE: 54441
+Processing image 21
+Cand: 20, Score: 0.122221
+Cand: 19, Score: 0.106375
+Cand: 0, Score: 0.0846913
+Cand: 18, Score: 0.0808867
+Cand: 17, Score: 0.0695057
+Cand: 16, Score: 0.0474229
+Cand: 15, Score: 0.0354531
+Cand: 13, Score: 0.0302031
+Cand: 12, Score: 0.030159
+Cand: 14, Score: 0.0283008
+Cand: 11, Score: 0.0224142
+Cand: 10, Score: 0.0170757
+Cand: 9, Score: 0.0137867
+Cand: 8, Score: 0.0104151
+Cand: 6, Score: 0.00908796
+Total features found in the image: 1179
+Total matches found against the index: 3265
+Total index size BEFORE UPDATE: 54441
+Total index size AFTER UPDATE: 55530
+Processing image 22
+Cand: 21, Score: 0.145193
+Cand: 20, Score: 0.098836
+Cand: 19, Score: 0.0948712
+Cand: 0, Score: 0.0800182
+Cand: 18, Score: 0.0728034
+Cand: 17, Score: 0.0509626
+Cand: 16, Score: 0.0381797
+Cand: 15, Score: 0.0259148
+Cand: 14, Score: 0.0232631
+Cand: 13, Score: 0.0214331
+Cand: 12, Score: 0.0180436
+Cand: 11, Score: 0.017526
+Cand: 10, Score: 0.0137863
+Cand: 9, Score: 0.0090701
+Cand: 1, Score: 0.00900203
+Total features found in the image: 1155
+Total matches found against the index: 3222
+Total index size BEFORE UPDATE: 55530
+Total index size AFTER UPDATE: 56644
+Processing image 23
+Cand: 22, Score: 0.122928
+Cand: 21, Score: 0.105371
+Cand: 20, Score: 0.0835829
+Cand: 0, Score: 0.0775998
+Cand: 19, Score: 0.0756787
+Cand: 18, Score: 0.0592634
+Cand: 17, Score: 0.0456799
+Cand: 16, Score: 0.0323698
+Cand: 15, Score: 0.0243434
+Cand: 13, Score: 0.020001
+Cand: 14, Score: 0.0197945
+Cand: 12, Score: 0.0184205
+Cand: 11, Score: 0.0126592
+Cand: 10, Score: 0.0125147
+Cand: 9, Score: 0.0084675
+Total features found in the image: 1032
+Total matches found against the index: 3247
+Total index size BEFORE UPDATE: 56644
+Total index size AFTER UPDATE: 57654
+Processing image 24
+Cand: 23, Score: 0.124794
+Cand: 22, Score: 0.109375
+Cand: 21, Score: 0.100285
+Cand: 20, Score: 0.0769435
+Cand: 0, Score: 0.0710995
+Cand: 19, Score: 0.07088
+Cand: 18, Score: 0.0473034
+Cand: 17, Score: 0.0390468
+Cand: 16, Score: 0.0276329
+Cand: 15, Score: 0.0216888
+Cand: 13, Score: 0.0176322
+Cand: 14, Score: 0.0170034
+Cand: 12, Score: 0.0151013
+Cand: 11, Score: 0.0139182
+Cand: 10, Score: 0.00931356
+Total features found in the image: 1112
+Total matches found against the index: 3321
+Total index size BEFORE UPDATE: 57654
+Total index size AFTER UPDATE: 58703
+Processing image 25
+Cand: 24, Score: 0.140892
+Cand: 23, Score: 0.110288
+Cand: 22, Score: 0.0960619
+Cand: 21, Score: 0.08454
+Cand: 0, Score: 0.0752219
+Cand: 20, Score: 0.0670204
+Cand: 19, Score: 0.0644392
+Cand: 18, Score: 0.0442811
+Cand: 17, Score: 0.0360012
+Cand: 16, Score: 0.0234524
+Cand: 15, Score: 0.0209267
+Cand: 13, Score: 0.014045
+Cand: 14, Score: 0.0128731
+Cand: 12, Score: 0.0126266
+Cand: 11, Score: 0.0108319
+Total features found in the image: 1000
+Total matches found against the index: 3486
+Total index size BEFORE UPDATE: 58703
+Total index size AFTER UPDATE: 59673
+Processing image 26
+Cand: 25, Score: 0.143183
+Cand: 24, Score: 0.108748
+Cand: 23, Score: 0.0958327
+Cand: 22, Score: 0.0849113
+Cand: 0, Score: 0.079117
+Cand: 21, Score: 0.0712615
+Cand: 20, Score: 0.0580935
+Cand: 19, Score: 0.0484147
+Cand: 18, Score: 0.0371594
+Cand: 17, Score: 0.0288378
+Cand: 16, Score: 0.0198314
+Cand: 15, Score: 0.0147061
+Cand: 14, Score: 0.0135479
+Cand: 13, Score: 0.0113187
+Cand: 12, Score: 0.0107238
+Total features found in the image: 1122
+Total matches found against the index: 3579
+Total index size BEFORE UPDATE: 59673
+Total index size AFTER UPDATE: 60746
+Processing image 27
+Cand: 26, Score: 0.12899
+Cand: 25, Score: 0.125899
+Cand: 24, Score: 0.093732
+Cand: 23, Score: 0.077937
+Cand: 0, Score: 0.0769913
+Cand: 22, Score: 0.071509
+Cand: 21, Score: 0.060053
+Cand: 20, Score: 0.0468058
+Cand: 19, Score: 0.0401424
+Cand: 18, Score: 0.0326104
+Cand: 17, Score: 0.0242426
+Cand: 16, Score: 0.0184098
+Cand: 15, Score: 0.01195
+Cand: 14, Score: 0.00873758
+Cand: 12, Score: 0.00833809
+Total features found in the image: 1086
+Total matches found against the index: 3470
+Total index size BEFORE UPDATE: 60746
+Total index size AFTER UPDATE: 61789
+Processing image 28
+Cand: 27, Score: 0.184326
+Cand: 26, Score: 0.150431
+Cand: 25, Score: 0.133151
+Cand: 24, Score: 0.110185
+Cand: 0, Score: 0.0848177
+Cand: 23, Score: 0.0795159
+Cand: 22, Score: 0.0733418
+Cand: 21, Score: 0.0636811
+Cand: 20, Score: 0.0449714
+Cand: 19, Score: 0.042344
+Cand: 18, Score: 0.0301498
+Cand: 17, Score: 0.0203859
+Cand: 16, Score: 0.0153997
+Cand: 15, Score: 0.00999295
+Cand: 1, Score: 0.00988054
+Total features found in the image: 1092
+Total matches found against the index: 3110
+Total index size BEFORE UPDATE: 61789
+Total index size AFTER UPDATE: 62830
+Processing image 29
+Cand: 28, Score: 0.185169
+Cand: 27, Score: 0.141157
+Cand: 26, Score: 0.128225
+Cand: 25, Score: 0.103335
+Cand: 24, Score: 0.0835584
+Cand: 23, Score: 0.07749
+Cand: 0, Score: 0.0716092
+Cand: 22, Score: 0.06266
+Cand: 21, Score: 0.0516568
+Cand: 20, Score: 0.0352731
+Cand: 19, Score: 0.0331328
+Cand: 18, Score: 0.0256387
+Cand: 17, Score: 0.0187599
+Cand: 16, Score: 0.010015
+Cand: 1, Score: 0.0086852
+Total features found in the image: 1047
+Total matches found against the index: 2965
+Total index size BEFORE UPDATE: 62830
+Total index size AFTER UPDATE: 63818
+Processing image 30
+Cand: 29, Score: 0.189123
+Cand: 28, Score: 0.16465
+Cand: 27, Score: 0.129237
+Cand: 26, Score: 0.115461
+Cand: 25, Score: 0.0919153
+Cand: 0, Score: 0.0732909
+Cand: 24, Score: 0.0701545
+Cand: 23, Score: 0.0560111
+Cand: 22, Score: 0.0483049
+Cand: 21, Score: 0.0451217
+Cand: 20, Score: 0.0286957
+Cand: 19, Score: 0.0248485
+Cand: 18, Score: 0.0186507
+Cand: 17, Score: 0.0141659
+Cand: 16, Score: 0.0104215
+Total features found in the image: 1043
+Total matches found against the index: 3064
+Total index size BEFORE UPDATE: 63818
+Total index size AFTER UPDATE: 64799
+Processing image 31
+Cand: 30, Score: 0.19122
+Cand: 29, Score: 0.164361
+Cand: 28, Score: 0.14896
+Cand: 27, Score: 0.109847
+Cand: 26, Score: 0.0925133
+Cand: 25, Score: 0.0860271
+Cand: 0, Score: 0.0730107
+Cand: 24, Score: 0.065409
+Cand: 23, Score: 0.0528955
+Cand: 22, Score: 0.0432673
+Cand: 21, Score: 0.0371661
+Cand: 20, Score: 0.0234769
+Cand: 19, Score: 0.0205438
+Cand: 18, Score: 0.0166462
+Cand: 17, Score: 0.0136014
+Total features found in the image: 1013
+Total matches found against the index: 3138
+Total index size BEFORE UPDATE: 64799
+Total index size AFTER UPDATE: 65728
+Processing image 32
+Cand: 31, Score: 0.218343
+Cand: 30, Score: 0.190372
+Cand: 29, Score: 0.148351
+Cand: 28, Score: 0.119316
+Cand: 27, Score: 0.0953389
+Cand: 26, Score: 0.086272
+Cand: 0, Score: 0.0713528
+Cand: 25, Score: 0.0699194
+Cand: 24, Score: 0.0513017
+Cand: 23, Score: 0.0405976
+Cand: 22, Score: 0.0326826
+Cand: 21, Score: 0.0298271
+Cand: 20, Score: 0.0188246
+Cand: 19, Score: 0.014581
+Cand: 18, Score: 0.0131155
+Total features found in the image: 1130
+Total matches found against the index: 3242
+Total index size BEFORE UPDATE: 65728
+Total index size AFTER UPDATE: 66739
+Processing image 33
+Cand: 32, Score: 0.251756
+Cand: 31, Score: 0.189614
+Cand: 30, Score: 0.16523
+Cand: 29, Score: 0.132391
+Cand: 28, Score: 0.110481
+Cand: 27, Score: 0.0779837
+Cand: 0, Score: 0.0744952
+Cand: 26, Score: 0.067426
+Cand: 25, Score: 0.0577728
+Cand: 24, Score: 0.0449619
+Cand: 23, Score: 0.0353931
+Cand: 22, Score: 0.0247824
+Cand: 21, Score: 0.0238192
+Cand: 20, Score: 0.0211633
+Cand: 19, Score: 0.0147439
+Total features found in the image: 1082
+Total matches found against the index: 3335
+Total index size BEFORE UPDATE: 66739
+Total index size AFTER UPDATE: 67718
+Processing image 34
+Cand: 33, Score: 0.246783
+Cand: 32, Score: 0.192389
+Cand: 31, Score: 0.160753
+Cand: 30, Score: 0.1275
+Cand: 29, Score: 0.105669
+Cand: 28, Score: 0.0955983
+Cand: 0, Score: 0.07664
+Cand: 27, Score: 0.071969
+Cand: 26, Score: 0.0545752
+Cand: 25, Score: 0.0501944
+Cand: 24, Score: 0.0386944
+Cand: 23, Score: 0.0289579
+Cand: 21, Score: 0.020603
+Cand: 22, Score: 0.0201473
+Cand: 20, Score: 0.0130689
+Total features found in the image: 1006
+Total matches found against the index: 3221
+Total index size BEFORE UPDATE: 67718
+Total index size AFTER UPDATE: 68675
+Processing image 35
+Cand: 34, Score: 0.260377
+Cand: 33, Score: 0.22818
+Cand: 32, Score: 0.17624
+Cand: 31, Score: 0.149312
+Cand: 30, Score: 0.121137
+Cand: 29, Score: 0.0969955
+Cand: 28, Score: 0.0740302
+Cand: 0, Score: 0.0737537
+Cand: 27, Score: 0.0612652
+Cand: 26, Score: 0.0494577
+Cand: 25, Score: 0.0384938
+Cand: 24, Score: 0.0268435
+Cand: 23, Score: 0.023857
+Cand: 22, Score: 0.0170854
+Cand: 21, Score: 0.0130972
+Total features found in the image: 1065
+Total matches found against the index: 3353
+Total index size BEFORE UPDATE: 68675
+Total index size AFTER UPDATE: 69703
+Processing image 36
+Cand: 35, Score: 0.270956
+Cand: 34, Score: 0.209833
+Cand: 33, Score: 0.190439
+Cand: 32, Score: 0.152496
+Cand: 31, Score: 0.123561
+Cand: 30, Score: 0.104786
+Cand: 29, Score: 0.0886075
+Cand: 0, Score: 0.067722
+Cand: 28, Score: 0.0654925
+Cand: 27, Score: 0.0475888
+Cand: 26, Score: 0.0391107
+Cand: 25, Score: 0.0306155
+Cand: 24, Score: 0.021919
+Cand: 23, Score: 0.0168609
+Cand: 22, Score: 0.0148939
+Total features found in the image: 1003
+Total matches found against the index: 3284
+Total index size BEFORE UPDATE: 69703
+Total index size AFTER UPDATE: 70622
+Processing image 37
+Cand: 36, Score: 0.25815
+Cand: 35, Score: 0.231118
+Cand: 34, Score: 0.183336
+Cand: 33, Score: 0.183135
+Cand: 32, Score: 0.128681
+Cand: 31, Score: 0.104153
+Cand: 30, Score: 0.0868773
+Cand: 29, Score: 0.0697681
+Cand: 0, Score: 0.0624874
+Cand: 28, Score: 0.0544066
+Cand: 27, Score: 0.041702
+Cand: 26, Score: 0.0340141
+Cand: 25, Score: 0.0265002
+Cand: 24, Score: 0.0171632
+Cand: 23, Score: 0.0162521
+Total features found in the image: 1003
+Total matches found against the index: 3253
+Total index size BEFORE UPDATE: 70622
+Total index size AFTER UPDATE: 71557
+Processing image 38
+Cand: 37, Score: 0.244756
+Cand: 36, Score: 0.221027
+Cand: 35, Score: 0.190895
+Cand: 34, Score: 0.162183
+Cand: 33, Score: 0.13788
+Cand: 32, Score: 0.110539
+Cand: 31, Score: 0.087393
+Cand: 30, Score: 0.0659491
+Cand: 0, Score: 0.0659078
+Cand: 29, Score: 0.052182
+Cand: 28, Score: 0.0392874
+Cand: 27, Score: 0.0278168
+Cand: 26, Score: 0.0263729
+Cand: 25, Score: 0.0198569
+Cand: 24, Score: 0.0152473
+Total features found in the image: 1128
+Total matches found against the index: 3244
+Total index size BEFORE UPDATE: 71557
+Total index size AFTER UPDATE: 72594
+Processing image 39
+Cand: 38, Score: 0.237764
+Cand: 37, Score: 0.205447
+Cand: 36, Score: 0.195019
+Cand: 35, Score: 0.168839
+Cand: 34, Score: 0.133123
+Cand: 33, Score: 0.1205
+Cand: 32, Score: 0.0947908
+Cand: 31, Score: 0.0714436
+Cand: 0, Score: 0.0684379
+Cand: 30, Score: 0.0562056
+Cand: 29, Score: 0.0476793
+Cand: 28, Score: 0.0328376
+Cand: 27, Score: 0.0217199
+Cand: 26, Score: 0.0191759
+Cand: 25, Score: 0.0166987
+Total features found in the image: 1147
+Total matches found against the index: 3315
+Total index size BEFORE UPDATE: 72594
+Total index size AFTER UPDATE: 73653
+Processing image 40
+Cand: 39, Score: 0.260778
+Cand: 38, Score: 0.223927
+Cand: 37, Score: 0.199872
+Cand: 36, Score: 0.174087
+Cand: 35, Score: 0.152126
+Cand: 34, Score: 0.119545
+Cand: 33, Score: 0.113105
+Cand: 32, Score: 0.0866057
+Cand: 31, Score: 0.0653105
+Cand: 0, Score: 0.0624394
+Cand: 30, Score: 0.0556537
+Cand: 29, Score: 0.0406068
+Cand: 28, Score: 0.0298688
+Cand: 27, Score: 0.0217712
+Cand: 26, Score: 0.0194042
+Total features found in the image: 1173
+Total matches found against the index: 3331
+Total index size BEFORE UPDATE: 73653
+Total index size AFTER UPDATE: 74684
+Processing image 41
+Cand: 40, Score: 0.263592
+Cand: 39, Score: 0.230048
+Cand: 38, Score: 0.197884
+Cand: 37, Score: 0.161351
+Cand: 36, Score: 0.148259
+Cand: 35, Score: 0.117277
+Cand: 34, Score: 0.100949
+Cand: 33, Score: 0.0848621
+Cand: 32, Score: 0.0721164
+Cand: 0, Score: 0.0621206
+Cand: 31, Score: 0.0519403
+Cand: 30, Score: 0.0435843
+Cand: 29, Score: 0.0291095
+Cand: 28, Score: 0.0206798
+Cand: 27, Score: 0.019627
+Total features found in the image: 1075
+Total matches found against the index: 3381
+Total index size BEFORE UPDATE: 74684
+Total index size AFTER UPDATE: 75654
+Processing image 42
+Cand: 41, Score: 0.268011
+Cand: 40, Score: 0.247728
+Cand: 39, Score: 0.210591
+Cand: 38, Score: 0.172225
+Cand: 37, Score: 0.139862
+Cand: 36, Score: 0.129134
+Cand: 35, Score: 0.110324
+Cand: 34, Score: 0.0879181
+Cand: 33, Score: 0.0747611
+Cand: 0, Score: 0.0674393
+Cand: 32, Score: 0.0636897
+Cand: 31, Score: 0.0461022
+Cand: 30, Score: 0.0368578
+Cand: 29, Score: 0.0276037
+Cand: 28, Score: 0.0204625
+Total features found in the image: 1167
+Total matches found against the index: 3655
+Total index size BEFORE UPDATE: 75654
+Total index size AFTER UPDATE: 76729
+Processing image 43
+Cand: 42, Score: 0.2953
+Cand: 41, Score: 0.232693
+Cand: 40, Score: 0.202419
+Cand: 39, Score: 0.169362
+Cand: 38, Score: 0.136481
+Cand: 37, Score: 0.111478
+Cand: 36, Score: 0.102358
+Cand: 35, Score: 0.081292
+Cand: 34, Score: 0.0681279
+Cand: 0, Score: 0.0659402
+Cand: 33, Score: 0.0571822
+Cand: 32, Score: 0.0447163
+Cand: 31, Score: 0.0357149
+Cand: 30, Score: 0.0239017
+Cand: 29, Score: 0.017223
+Total features found in the image: 1093
+Total matches found against the index: 3412
+Total index size BEFORE UPDATE: 76729
+Total index size AFTER UPDATE: 77727
+Processing image 44
+Cand: 43, Score: 0.287757
+Cand: 42, Score: 0.245964
+Cand: 41, Score: 0.206955
+Cand: 40, Score: 0.190355
+Cand: 39, Score: 0.156809
+Cand: 38, Score: 0.133673
+Cand: 37, Score: 0.111564
+Cand: 36, Score: 0.100814
+Cand: 35, Score: 0.0826099
+Cand: 0, Score: 0.0658544
+Cand: 34, Score: 0.0624803
+Cand: 33, Score: 0.0588179
+Cand: 32, Score: 0.0408747
+Cand: 31, Score: 0.0277102
+Cand: 30, Score: 0.0215708
+Total features found in the image: 1140
+Total matches found against the index: 3635
+Total index size BEFORE UPDATE: 77727
+Total index size AFTER UPDATE: 78758
+Processing image 45
+Cand: 44, Score: 0.317653
+Cand: 43, Score: 0.261857
+Cand: 42, Score: 0.244538
+Cand: 41, Score: 0.193161
+Cand: 40, Score: 0.161082
+Cand: 39, Score: 0.1447
+Cand: 38, Score: 0.115107
+Cand: 37, Score: 0.0940608
+Cand: 36, Score: 0.0773324
+Cand: 35, Score: 0.0649716
+Cand: 0, Score: 0.0612517
+Cand: 34, Score: 0.0479649
+Cand: 33, Score: 0.0445345
+Cand: 32, Score: 0.0291934
+Cand: 31, Score: 0.0242992
+Total features found in the image: 1143
+Total matches found against the index: 3658
+Total index size BEFORE UPDATE: 78758
+Total index size AFTER UPDATE: 79775
+Processing image 46
+Cand: 45, Score: 0.299236
+Cand: 44, Score: 0.274862
+Cand: 43, Score: 0.221747
+Cand: 42, Score: 0.196871
+Cand: 41, Score: 0.151967
+Cand: 40, Score: 0.137467
+Cand: 39, Score: 0.102011
+Cand: 38, Score: 0.0947594
+Cand: 37, Score: 0.0747642
+Cand: 0, Score: 0.0658829
+Cand: 36, Score: 0.0630124
+Cand: 35, Score: 0.047989
+Cand: 34, Score: 0.0367062
+Cand: 33, Score: 0.0332528
+Cand: 32, Score: 0.0241635
+Total features found in the image: 1016
+Total matches found against the index: 3557
+Total index size BEFORE UPDATE: 79775
+Total index size AFTER UPDATE: 80700
+Processing image 47
+Cand: 46, Score: 0.274519
+Cand: 45, Score: 0.258339
+Cand: 44, Score: 0.237463
+Cand: 43, Score: 0.205148
+Cand: 42, Score: 0.171781
+Cand: 41, Score: 0.128399
+Cand: 40, Score: 0.116885
+Cand: 39, Score: 0.0964643
+Cand: 38, Score: 0.0724235
+Cand: 0, Score: 0.0595275
+Cand: 37, Score: 0.0568145
+Cand: 36, Score: 0.0495225
+Cand: 35, Score: 0.0391885
+Cand: 34, Score: 0.0328607
+Cand: 33, Score: 0.0226365
+Total features found in the image: 1034
+Total matches found against the index: 3493
+Total index size BEFORE UPDATE: 80700
+Total index size AFTER UPDATE: 81688
+Processing image 48
+Cand: 47, Score: 0.293116
+Cand: 46, Score: 0.244562
+Cand: 45, Score: 0.236107
+Cand: 44, Score: 0.202774
+Cand: 43, Score: 0.16601
+Cand: 42, Score: 0.15308
+Cand: 41, Score: 0.114941
+Cand: 40, Score: 0.101702
+Cand: 39, Score: 0.078703
+Cand: 0, Score: 0.0718034
+Cand: 38, Score: 0.0655936
+Cand: 37, Score: 0.0573758
+Cand: 36, Score: 0.0445078
+Cand: 35, Score: 0.0365057
+Cand: 34, Score: 0.0231687
+Total features found in the image: 1132
+Total matches found against the index: 3426
+Total index size BEFORE UPDATE: 81688
+Total index size AFTER UPDATE: 82697
+Processing image 49
+Cand: 48, Score: 0.288264
+Cand: 47, Score: 0.266174
+Cand: 46, Score: 0.221955
+Cand: 45, Score: 0.198786
+Cand: 44, Score: 0.178482
+Cand: 43, Score: 0.151152
+Cand: 42, Score: 0.126815
+Cand: 41, Score: 0.0980642
+Cand: 40, Score: 0.081156
+Cand: 0, Score: 0.0642088
+Cand: 39, Score: 0.0615614
+Cand: 38, Score: 0.0485665
+Cand: 37, Score: 0.0352833
+Cand: 36, Score: 0.0319056
+Cand: 35, Score: 0.0221883
+Total features found in the image: 1184
+Total matches found against the index: 3375
+Total index size BEFORE UPDATE: 82697
+Total index size AFTER UPDATE: 83789
+
+real	0m43.521s
+user	0m43.572s
+sys	0m0.212s
+

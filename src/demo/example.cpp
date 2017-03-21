@@ -72,8 +72,14 @@ int main(int argc, char** argv)
     // Adding image 0
     // Detecting and describing keypoints.
     std::vector<cv::KeyPoint> kps0;
-    cv::Mat dscs0;
+    cv_umat_type dscs0;
+
+#if CV_MAJOR_VERSION == 2
     cv::Mat image0 = cv::imread(filenames[0]);
+#elif CV_MAJOR_VERSION == 3
+    cv_umat_type image0 = cv::imread(filenames[0]).getUMat(cv::ACCESS_READ);
+#endif
+
     detector->detect(image0, kps0);
     extractor->compute(image0, kps0, dscs0);
     cv::KeyPointsFilter::retainBest(kps0, 1000);
@@ -86,8 +92,14 @@ int main(int argc, char** argv)
 
         // Detecting and describing keypoints.
         std::vector<cv::KeyPoint> kps;
-        cv::Mat dscs;
+        cv_umat_type dscs;
+
+#if CV_MAJOR_VERSION == 2
         cv::Mat image = cv::imread(filenames[i]);
+#elif CV_MAJOR_VERSION == 3
+        cv_umat_type image = cv::imread(filenames[i]).getUMat(cv::ACCESS_READ);
+#endif
+
         detector->detect(image, kps);
         extractor->compute(image, kps, dscs);
         cv::KeyPointsFilter::retainBest(kps, 1000);
