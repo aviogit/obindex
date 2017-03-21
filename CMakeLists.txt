@@ -14,7 +14,7 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
 find_package(catkin REQUIRED COMPONENTS roscpp)
 
 # System dependencies
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 find_package(Flann REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system filesystem)
 find_package(OpenMP REQUIRED)
@@ -31,6 +31,8 @@ catkin_package(
     CATKIN_DEPENDS roscpp
     DEPENDS OpenCV Boost
 )
+
+MESSAGE("Found OpenCV: ${OpenCV_INCLUDE_DIRS} --- ${OpenCV_LIBRARIES}")
 
 ###########
 ## Build ##
